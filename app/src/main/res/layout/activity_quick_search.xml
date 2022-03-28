@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.QuickSearchActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            app:navigationIcon="?attr/homeAsUpIndicator">
+
+            <TextView
+                android:id="@+id/toolbarTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="@string/quick_search"
+                android:textColor="@color/textColor_1"
+                android:textFontWeight="500"
+                android:textSize="18dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:clipToPadding="false"
+            android:paddingBottom="90dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_blood_group"
+                    android:textColor="@color/textColor_2"
+                    android:textFontWeight="500"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+
+                    <ToggleButton
+                        android:id="@+id/a_positive"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="A+"
+                        android:textOn="A+"
+                        android:textSize="14dp" />
+
+                    <ToggleButton
+                        android:id="@+id/b_positive"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="B+"
+                        android:textOn="B+"
+                        android:textSize="14dp" />
+
+                    <ToggleButton
+                        android:id="@+id/o_positive"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="O+"
+                        android:textOn="O+"
+                        android:textSize="14dp" />
+
+                    <ToggleButton
+                        android:id="@+id/ab_positive"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="AB+"
+                        android:textOn="AB+"
+                        android:textSize="14dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+
+                    <ToggleButton
+                        android:id="@+id/a_negative"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="A-"
+                        android:textOn="A-"
+                        android:textSize="14dp" />
+
+                    <ToggleButton
+                        android:id="@+id/b_negative"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="B-"
+                        android:textOn="B-"
+                        android:textSize="14dp" />
+
+                    <ToggleButton
+                        android:id="@+id/o_negative"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="O-"
+                        android:textOn="O-"
+                        android:textSize="14dp" />
+
+                    <ToggleButton
+                        android:id="@+id/ab_negative"
+                        android:layout_width="42dp"
+                        android:layout_height="51dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/toggle_blood"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:textColor="@drawable/toggle_text_color"
+                        android:textFontWeight="600"
+                        android:textOff="AB-"
+                        android:textOn="AB-"
+                        android:textSize="14dp" />
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_select_district"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/select_district"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_select_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/select_area"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_select_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/select_gender"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_select_hospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/select_hospital"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:hintEnabled="false">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_select_religion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/select_religion"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:backgroundTint="#DA0A0A"
+                    android:id="@+id/btn_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:padding="10dp"
+                    android:text="@string/search"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="18dp"
+                    app:cornerRadius="10dp" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>
